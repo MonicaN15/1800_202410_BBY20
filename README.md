@@ -2,7 +2,7 @@
 
 ## 1. Project Description
 State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+This browser based web application is a banking app. This app helps you keep track of your finances by let you access everything in one place. 
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
