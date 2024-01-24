@@ -2,14 +2,14 @@
 
 ## 1. Project Description
 State your app in a nutshell, or one-sentence pitch. Give some elaboration on what the core features are.  
-This browser based web application to ... 
+This browser based web application is a banking app. This app helps you keep track of your finances by let you access everything in one place. 
+This browser based web application to make a mistake
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* ...
+* Monica, Group leader 
 * Max R
-* ...
-	
+* ...Hi, my name is Jaskunwar, I am excited to start this journey of creating a web application..  	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
 * HTML, CSS, JavaScript
