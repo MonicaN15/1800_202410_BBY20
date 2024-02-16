@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
+    <title>Crave Control</title>
     <meta name="comp1800 template" content="My 1800 App">
 
     <!-- Required meta tags -->
@@ -16,16 +16,61 @@
 
     <!-- Link to styles of your own -->
     <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <style>
+        #welcome-back{
+            text-align: center;
+        }
+
+        #monthly-transcations{
+            text-align: center;
+        }
+        #landing-page-image{
+            width: 20%; 
+            height: 20%;
+        }
+
+    </style>
+
+    <style>
+        /* Style for the footer */
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px 0; /* Reduced padding */
+        }
+
+        .footer img {
+            width: 50px; /* Adjusted image size */
+            height: 50px; /* Adjusted image size */
+            margin: 0 5px; /* Reduced margin */
+            object-fit: cover; /* Ensure all images are square */
+        }
+    </style>
 
 </head>
 
 <body>
 
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-    <!-- Stuff for body goes here -->
-
+    <!--Welcome Back message-->
+    <div id="welcome-back">
+        <br>
+        <h2>Welcome Back</h2>
+        <h2>[Username]!</h2>
+    </div>
+   
+    <!--Monthly Transactions message-->
+    <div id="monthly-transcations">
+        <br>
+        <br>
+        <h2>[Months's] Transactions</h2>
+        <br>
+        <br>
+        <img src="c:\Users\jasku\Desktop\Projects 1800\Lab 5\Landing page image.png" id="landing-page-image">
+    </div>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
@@ -33,6 +78,15 @@
 
     <!-- Link to scripts of your own -->
     <!-- <script src="./scripts/script.js"></script> -->
+
+    <div class="footer">
+        <!-- Five images for the footer -->
+        <img src="images/home-icon.webp" alt="Image 1">
+        <img src="images/Calendar.png" alt="Image 2">
+        <img src="images/plus.png" alt="Image 3">
+        <img src="images/dollar-sign.png" alt="Image 4">
+        <img src="images/profile-icon.webp" alt="Image 5">
+    </div>
 
 </body>
 
