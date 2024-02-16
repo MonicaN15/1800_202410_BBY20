@@ -9,7 +9,7 @@ This browser based web application to make a mistake
 List team members and/or short bio's here... 
 * Monica, Group leader 
 * ...
-* Jaskunwar  
+* ...Hi, my name is Jaskunwar, I am excited to start this journey of creating a web application..  
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
