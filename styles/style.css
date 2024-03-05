@@ -36,6 +36,45 @@
   height: 20%;
 }
 
+#edit-icon {
+  min-width: 100px;
+  max-width: 140px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#amount-text{
+  float: left;
+  font-size: 15pt;
+}
+
+#days-text{
+  float: left;
+  font-size: 15pt;
+}
+
+#amount-input {
+  height: 20px;
+  width: 70px;
+  float: right;
+}
+
+#days-input {
+  height: 20px;
+  width: 70px;
+  float: right;
+}
+
+#submit-button {
+  padding: 8px 25px;
+  font-size: 15pt;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
 /* Style for the footer */
 .footer {
   position: fixed;
