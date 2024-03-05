@@ -1,0 +1,60 @@
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: rgb(81, 81, 255);
+}
+
+/* centers logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-back {
+  text-align: center;
+}
+
+#monthly-transcations {
+  text-align: center;
+}
+
+#landing-page-image {
+  width: 20%;
+  height: 20%;
+}
+
+/* Style for the footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px 0;
+  /* Reduced padding */
+}
+
+.footer img {
+  width: 50px;
+  /* Adjusted image size */
+  height: 50px;
+  /* Adjusted image size */
+  margin: 0 5px;
+  /* Reduced margin */
+  object-fit: cover;
+  /* Ensure all images are square */
+}
