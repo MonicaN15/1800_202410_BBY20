@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Set Budget Page</title>
+    <meta name="comp1800 template" content="My 1800 App">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Library CSS CDN go here -->
+    <!-- Boostrap Library JS CDN  go here -->
+    <!-- Other libraries go here -->
+    <!-- Link to styles of your own -->
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <style>
+      .hyperlinks {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+      }
+
+      /* centers logo */
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #edit-icon {
+        min-width: 100px;
+        max-width: 140px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #amount-text{
+        float: left;
+        font-size: 15pt;
+      }
+
+      #days-text{
+        float: left;
+        font-size: 15pt;
+      }
+
+      #amount-input {
+        height: 20px;
+        width: 70px;
+        float: right;
+      }
+
+      #days-input {
+        height: 20px;
+        width: 70px;
+        float: right;
+      }
+
+      #submit-button {
+        padding: 8px 25px;
+        font-size: 15pt;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+      }
+
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        text-align: center;
+        padding: 10px 0;
+        /* Reduced padding */
+      }
+
+      .footer img {
+        width: 50px;
+        /* Adjusted image size */
+        height: 50px;
+        /* Adjusted image size */
+        margin: 0 5px;
+        /* Reduced margin */
+        object-fit: cover;
+        /* Ensure all images are square */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="hyperlinks">
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+        <a href="#settings">Settings</a>
+        <a href="#logout">Logout</a>
+      </div>
+      <br>
+      <div class="logo">
+        <img src="images/Logo - Crave Control.png" alt="Crave Control" />
+      </div>
+    </div>
+    <br>
+
+    <!--Set Button Page-->
+    <div id="set-budget-page">
+      <br>
+      <br>
+      <img id="edit-icon" src="https://static.thenounproject.com/png/4436557-200.png" alt="Edit-icon">
+      <br>
+      <br>
+      <br>
+
+      <label id="amount-text">Amount $:</label>
+      <input type="number" id="amount-input" name="amount-input" min="1" max="5000" required placeholder="50">
+      <br>
+
+      <br>
+      <label id="days-text">Days:</label>
+      <input type="number" id="days-input" name="days-input" min="1" max="365" required placeholder="7">
+      <br>
+      <br>
+      <br>
+      
+      <form action="index.html">
+        <input id="submit-button" type="submit" value="Submit">
+      </form>
+      
+      <br>
+    </div>
+
+    <div class="footer">
+      <!-- Five images for the footer -->
+      <img src="images/Calendar.png" alt="Image 1">
+      <img src="images/plus.png" alt="Image 2">
+      <img src="images/dollar-sign.png" alt="Image 3">
+    </div>
+  </body>
+</html>
