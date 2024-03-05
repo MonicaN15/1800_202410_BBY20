@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
+    <title>Crave Control</title>
     <meta name="comp1800 template" content="My 1800 App">
 
     <!-- Required meta tags -->
@@ -17,25 +17,79 @@
     <!-- Link to styles of your own -->
     <!-- <link rel="stylesheet" href="./styles/style.css"> -->
     <style>
-        #welcome-back{
+        /* puts all hyperlinks in the navbar at the end */
+        .hyperlinks {
+            display: flex;
+            justify-content: end;
+            align-items: end;
+        }
+
+        /* centers logo */
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #welcome-back {
             text-align: center;
         }
 
-        #monthly-transcations{
+        #monthly-transcations {
             text-align: center;
         }
         #landing-page-image{
-            min-width: 20%;
+            min-width: 20%; 
             min-height: 20%;
             max-width: 25%; 
             max-height: 25%;
         }
+    </style>
 
+    <style>
+        /* Style for the footer */
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px 0;
+            /* Reduced padding */
+        }
+
+        .footer img {
+            width: 50px;
+            /* Adjusted image size */
+            height: 50px;
+            /* Adjusted image size */
+            margin: 0 5px;
+            /* Reduced margin */
+            object-fit: cover;
+            /* Ensure all images are square */
+        }
     </style>
 
 </head>
 
 <body>
+
+    <!--Navigation bar-->
+    <div class="navbar">
+        <div class="hyperlinks">
+            <a href="#home">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#settings">Settings</a>
+            <a href="#logout">Logout</a>
+        </div>
+
+        <br>
+
+        <div class="logo">
+            <img src="images/Logo - Crave Control.png" alt="Crave Control" />
+        </div>
+    </div>
 
     <!--Welcome Back message-->
     <div id="welcome-back">
@@ -43,7 +97,7 @@
         <h2>Welcome Back</h2>
         <h2>[Username]!</h2>
     </div>
-   
+
     <!--Monthly Transactions message-->
     <div id="monthly-transcations">
         <br>
@@ -59,8 +113,8 @@
     <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
-    <!-- <script src="./scripts/script.js"></script> -->
 
+    <!-- <script src="./scripts/script.js"></script> -->
     <div class="footer">
         <!-- Five images for the footer -->
         <img src="images/Calendar.png" alt="Image 1">
@@ -70,7 +124,6 @@
         </a>
 
     </div>
-
 </body>
 
 </html>

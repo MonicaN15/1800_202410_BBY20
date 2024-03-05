@@ -11,6 +11,7 @@ List team members and/or short bio's here...
 * Max R
 * Jaskunwar  	
 
+
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
 * HTML, CSS, JavaScript
