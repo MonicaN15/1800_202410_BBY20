@@ -97,3 +97,15 @@
   object-fit: cover;
   /* Ensure all images are square */
 }
+
+#addtrans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#yesno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
