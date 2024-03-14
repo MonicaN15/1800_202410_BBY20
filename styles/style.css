@@ -109,3 +109,70 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/*↓ monthlyspending.html Style elements ↓*/
+
+        /*Style element for monthly spending message on monthlyspending.html*/
+        #monthly-spending{
+          margin-bottom: 20px; 
+      }
+
+      /*Style element for how much money you have spent on monthlyspending.html*/
+      #money-spent-this-year{
+          display: inline-block; 
+          padding: 10px 20px;
+          background-color: #a4a4a4;
+          color: #000000;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;   
+          margin-bottom: 20px;  
+      }
+
+      /*Style element for back button image on monthlyspending.html*/
+      #back-button-image{
+          max-width: 40px;
+          max-height: 40px;
+          min-width: 20px; 
+          min-height: 20px;
+          margin-bottom: 5px;
+      }
+  
+      /*Style element for monthly spending message container in monthlyspending.html*/
+      .monthly-spending-message-container {
+          text-align: center;
+      }
+
+      /*Style elements for compare button on monthlyspending.html*/
+      .compare-button {
+          padding: 10px 20px;
+          background-color: #a4a4a4;
+          color: #000000;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          margin-bottom: 20px;
+      }
+      
+      /*Style element for the months button container in monthlyspending.html*/
+      .months-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); 
+          gap: 10px; 
+          text-align: center;
+          margin-bottom: 10%;
+      }
+
+      /*Style element for the months button in months container in monthlyspending.html*/
+      .months-container a {
+          display: inline-block;
+          padding: 2% 10%;
+          color: #000000;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          text-decoration: none;
+      }
+      
+/*↑ monthlyspending.html Style elements ↑*/
