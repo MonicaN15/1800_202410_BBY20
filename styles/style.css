@@ -77,13 +77,14 @@
 
 /* Style for the footer */
 .footer {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #f2f2f2;
   text-align: center;
   padding: 10px 0;
+  height: 10px;
   /* Reduced padding */
 }
 
@@ -176,3 +177,76 @@
       }
       
 /*↑ monthlyspending.html Style elements ↑*/
+
+/*↓ yearlyreport.html Style elements ↓*/
+
+      /*Style element for how much money you have spent on monthlyspending.html*/
+      #money-yearly-report {
+        display: flex; /* Use flexbox for centering */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: fit-content; /* Adjust width as per content */
+        margin: 100px auto 50px; /* Center align horizontally and add top and bottom margin */
+        /* padding: 10px 20px; */
+        background-color: #a4a4a4;
+        color: #000000;
+        border: solid;
+        cursor: pointer;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    #money-yearly-report .report-heading {
+        margin-bottom: 10px; /* Add margin below the heading */
+    }
+    
+    /* Style for the graph image container */
+    .graph-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; /* Add space between text and image */
+    }
+    
+    /* Style for the graph image */
+    .graph-image {
+        max-width: 33.33%; /* Make the image one-third of its original size */
+        max-height: 33.33%; /* Make the image one-third of its original size */
+    }
+    
+    /* Style for the top spendings container */
+    .top-spendings-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .top-spendings-container h3 {
+        margin-bottom: 10px;
+    }
+    
+    .top-spendings-container ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .top-spendings-container ul li {
+        margin-bottom: 5px;
+    }
+    
+    /*↓ yearlyreport.html Style elements ↓*/
+    
+    /*Style element for back button image on monthlyspending.html*/
+    #back-button-image{
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 20px; 
+        min-height: 20px;
+        margin-bottom: 5px;
+    }
+    
+    /*Style element for monthly spending message container in monthlyspending.html*/
+    .monthly-spending-message-container {
+        text-align: center;
+    }
+/*↑ yearlyreport.html Style elements ↑*/
