@@ -250,3 +250,8 @@
         text-align: center;
     }
 /*↑ yearlyreport.html Style elements ↑*/
+
+/* Centers text in all the transactionforms */
+#transactionform {
+  text-align: center;
+}
