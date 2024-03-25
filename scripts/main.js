@@ -1,7 +1,14 @@
-const now = new Date;
+// Get current date
+var currentDate = new Date();
 
-const currentMonth = now.toLocaleString;
+// Array of month names
+var monthNames = [
+    "January", "February", "March", "April", "May", "June", "July",
+    "August", "September", "October", "November", "December"
+];
 
-document.getElementById("display-month").innerText = currentMonth + " Month's Transactions";
+// Get the current month
+var currentMonth = monthNames[currentDate.getMonth()] + "'s Transactions";
 
-
+// Display the current month
+document.getElementById("currentMonth").innerHTML = currentMonth;
