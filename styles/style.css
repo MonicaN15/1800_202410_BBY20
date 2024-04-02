@@ -435,7 +435,7 @@ body {
   text-align: center; /* Center aligning text */
 }
 
-.profilemaincontainer {
+.maincontainer {
   max-width: 800px;
   margin: 20px auto; /* Centering the container horizontally */
   padding: 20px;
@@ -449,7 +449,7 @@ h1 {
   margin-bottom: 20px; /* Adding some space below the heading */
 }
 
-.user {
+.dev {
   margin-bottom: 40px;
 }
 
