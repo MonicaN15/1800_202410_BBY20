@@ -17,6 +17,17 @@
 
 
 /* centers logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 700px;
+  height: auto; 
+}
+
 /* Centers logo and makes the image smaller */
 
 #welcome-back {
