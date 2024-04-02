@@ -360,3 +360,47 @@
 }
 
 /*↑ comparemonths.html Style elements ↑*/
+
+/*↓ aboutus.html Style elements ↓*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  text-align: center; /* Center aligning text */
+}
+
+.maincontainer {
+  max-width: 800px;
+  margin: 20px auto; /* Centering the container horizontally */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left; /* Resetting text alignment to left for content within the container */
+}
+
+h1 {
+  margin-bottom: 20px; /* Adding some space below the heading */
+}
+
+.dev {
+  margin-bottom: 40px;
+}
+
+.dev img {
+  display: block;
+  margin: 0 auto 20px; /* Centering the image horizontally */
+  border-radius: 50%;
+  max-width: 200px;
+  height: auto;
+}
+
+.dev h2 {
+  margin-bottom: 10px;
+}
+
+.dev p {
+  text-align: justify;
+}
+/*↑ aboutus.html Style elements ↑*/
