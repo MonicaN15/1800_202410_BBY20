@@ -1,5 +1,5 @@
 // Assign specific values to the top three spending amounts
-var topSpending1 = 300; 
+var topSpending1 = 300;
 var topSpending2 = 200;
 var topSpending3 = 400;
 
@@ -7,7 +7,7 @@ var topSpending3 = 400;
 var topSpendings = [topSpending1, topSpending2, topSpending3];
 
 // Sort the array in descending order
-topSpendings.sort(function(a, b) {
+topSpendings.sort(function (a, b) {
     return b - a;
 });
 

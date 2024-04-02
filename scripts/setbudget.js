@@ -22,16 +22,16 @@ function divide() {
         userDocRef.update({
             budget: totalBudget
         })
-    .then(() => {
-        // On successful update, log success message and redirect to main page
-        console.log("Budget successfully updated");
-        window.location.href = "main.html";
-    })
-    .catch((error) => {
-        // If there's an error updating the budget, log error message
-        console.error("Error updating budget: ", error);
-        // Handle error gracefully, e.g., display an error message to the user
-    });
+            .then(() => {
+                // On successful update, log success message and redirect to main page
+                console.log("Budget successfully updated");
+                window.location.href = "main.html";
+            })
+            .catch((error) => {
+                // If there's an error updating the budget, log error message
+                console.error("Error updating budget: ", error);
+                // Handle error gracefully, e.g., display an error message to the user
+            });
     } else {
         // If no user is signed in, redirect to the login page
         console.log("No user is signed in");

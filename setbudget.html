@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Set Budget Page</title>
-    <meta name="comp1800 project" content="My 1800 App">
 
-    <!------------------------>
-    <!-- Required meta tags -->
-    <!------------------------>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Set Budget Page</title>
+  <meta name="comp1800 project" content="My 1800 App">
 
-    <!------------------------------------------>
-    <!-- Bootstrap Library CSS JS CDN go here -->
-    <!------------------------------------------>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 
-    <!-------------------------------------------->
-    <!-- Other libraries and styles of your own -->
-    <!-------------------------------------------->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./styles/style.css">
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
-    <style>
-      /*Style element for the budget displayed on the set budget page*/
-      #budget {
-        text-align: center;
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <style>
+    /*Style element for the budget displayed on the set budget page*/
+    #budget {
+      text-align: center;
     }
+  </style>
 
-    </style>
+</head>
 
-  </head>
+<nav id="navbarPlaceholder"></nav>
 
-  <nav id="navbarPlaceholder"></nav>
+<br>
+
+<div class="logo">
+  <img src="/images/CraveControlBlueLogo.png" alt="Crave Control" />
+</div>
+
+<!--The back button of the page that leads to the previous page-->
+<div class="back-button">
+  <a href="javascript:history.go(-1)">
+    <img id="back-button-image" src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back button image">
+  </a>
+</div>
+
+<br>
+
+<!--Set Button Page-->
+<div id="set-budget-page">
+  <br>
+  <br>
+  <img id="edit-icon" src="https://static.thenounproject.com/png/4436557-200.png" alt="Edit-icon">
+  <br>
+  <br>
+
+  <!--Dollar amount input and message field-->
+  <label id="amount-text">Amount $:</label>
+  <input type="number" id="amount-input" placeholder="50">
+
+  <br>
+  <br>
+
+  <!--Days input and message field-->
+  <label id="days-text">Days:</label>
+  <input type="number" id="days-input" placeholder="5">
+
+  <br>
+  <br>
+
+  <!--Submit button-->
+  <button id="submit-button" onclick="divide()">Set</button>
 
   <br>
 
-  <div class="logo">
-      <img src="/images/CraveControlBlueLogo.png" alt="Crave Control" />
-  </div>
-
-  <!--The back button of the page that leads to the previous page-->
-  <div class="back-button">
-    <a href="javascript:history.go(-1)">
-      <img id="back-button-image" src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back button image">
-    </a>
-  </div>
+  <!--Displays the budget in ex. Budget is: $10 per day-->
+  <h3 id="budget"></h3>
 
   <br>
+</div>
 
-    <!--Set Button Page-->
-    <div id="set-budget-page">
-      <br>
-      <br>
-      <img id="edit-icon" src="https://static.thenounproject.com/png/4436557-200.png" alt="Edit-icon">
-      <br>
-      <br>
+<!-- Footer will be inserted here -->
+<nav id="footerPlaceholder"></nav>
 
-      <!--Dollar amount input and message field-->
-      <label id="amount-text">Amount $:</label>
-      <input type="number" id="amount-input" placeholder="50">
-      
-      <br>
-      <br>
 
-      <!--Days input and message field-->
-      <label id="days-text">Days:</label>
-      <input type="number" id="days-input" placeholder="5">
+<!---------------------------------------------->
+<!-- Your own JavaScript functions go here    -->
+<!---------------------------------------------->
+<script src="./scripts/firebaseAPI_BBY20.js"></script>
+<script src="./scripts/skeleton.js"></script>
+<script src="./scripts/setbudget.js"></script>
 
-      <br>
-      <br>
-      
-      <!--Submit button-->
-      <button id="submit-button" onclick="divide()">Set</button>
-      
-      <br>
+<!-- <script src="./scripts/script.js"></script> -->
 
-      <!--Displays the budget in ex. Budget is: $10 per day-->
-      <h3 id="budget"></h3>
-      
-      <br>
-    </div>
+</div>
 
-    <!-- Footer will be inserted here -->
-    <nav id="footerPlaceholder"></nav>
+</body>
 
-    
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_BBY20.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/setbudget.js"></script>
-
-    <!-- <script src="./scripts/script.js"></script> -->
-      
-  </div>
-
-  </body>
 </html>
