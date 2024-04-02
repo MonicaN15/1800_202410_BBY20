@@ -19,16 +19,6 @@
 
 /* centers logo */
 /* Centers logo and makes the image smaller */
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  width: 700px; /* Adjust the width to your desired size */
-  height: auto; /* Maintain aspect ratio */
-}
 
 #welcome-back {
   text-align: center;
@@ -82,7 +72,7 @@
   font-weight: bold;
 }
 
-/* Styles for the footer */
+/* Styles for the footer 
 .footer {
   position: fixed;
   bottom: 0;
@@ -91,15 +81,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-  background-color: #2c59f0; 
-  ;
-
-  
-=======
->>>>>>> 38a887d40cdc2694fc0b3e7670c994d1021c34c0
   padding: 20px;
 }
+*/
 
 .footer img {
   margin: 0 10px;
