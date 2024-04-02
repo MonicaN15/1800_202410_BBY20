@@ -71,7 +71,7 @@
   font-weight: bold;
 }
 
-/* Styles for the footer 
+ /* Styles for the footer */
 .footer {
   position: fixed;
   bottom: 0;
@@ -82,7 +82,6 @@
   align-items: center;
   padding: 20px;
 }
-*/
 
 .footer img {
   margin: 0 10px;
