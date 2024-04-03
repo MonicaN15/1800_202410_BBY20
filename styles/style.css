@@ -470,21 +470,20 @@ h1 {
 /*↑ aboutus.html Style elements ↑*/
 
 /*↓ profile.html Style elements ↓*/
-
 .profilemaincontainer {
   max-width: 800px;
-  margin: 20px auto;
-  /* Centering the container horizontally */
+  margin: 20px auto; /* Centering the container horizontally */
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  /* Resetting text alignment to left for content within the container */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left; /* Resetting text alignment to left for content within the container */
 }
 
 h1 {
   margin-bottom: 20px; /* Adding some space below the heading */
+  color: #506cf4; /* Changing text color */
+  font-size: 40px; /* Increasing font size */
 }
 
 .profileinfo {
@@ -520,7 +519,7 @@ h1 {
 #back-button-image-aboutus {
   max-width: 40px;
   max-height: 40px;
-  min-width: 20px;
+  min-width: 20px; 
   min-height: 20px;
   margin-bottom: 5px;
   position: fixed;
@@ -528,5 +527,4 @@ h1 {
   top: 25%;
   transform: translateY(-50%);
 }
-
 /*↑ profile.html Style elements ↑*/
