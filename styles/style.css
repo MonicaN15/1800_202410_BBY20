@@ -379,7 +379,7 @@ body {
   text-align: center; /* Center aligning text */
 }
 
-.maincontainer {
+.aboutusmaincontainer {
   max-width: 800px;
   margin: 20px auto; /* Centering the container horizontally */
   padding: 20px;
@@ -391,6 +391,8 @@ body {
 
 h1 {
   margin-bottom: 20px; /* Adding some space below the heading */
+  color: #506cf4; /* Changing text color */
+  font-size: 40px; /* Increasing font size */
 }
 
 .dev {
@@ -405,8 +407,18 @@ h1 {
   height: auto;
 }
 
-.dev h2 {
-  margin-bottom: 10px;
+.dev h2,
+.dev h3 {
+  margin-bottom: 10px; /* Add space between Name and Email */
+}
+
+.dev h2:last-child {
+  margin-bottom: 0; /* Remove space after Email */
+}
+
+.dev h3 {
+  display: inline; /* Place h3 text after h2 */
+  margin-left: 10px; /* Adjust margin as needed */
 }
 
 .dev p {
@@ -424,6 +436,7 @@ h1 {
   top: 25%;
   transform: translateY(-50%);
 }
+
 /*↑ aboutus.html Style elements ↑*/
 
 /*↓ profile.html Style elements ↓*/
@@ -435,7 +448,7 @@ body {
   text-align: center; /* Center aligning text */
 }
 
-.maincontainer {
+.profilemaincontainer {
   max-width: 800px;
   margin: 20px auto; /* Centering the container horizontally */
   padding: 20px;
@@ -447,17 +460,37 @@ body {
 
 h1 {
   margin-bottom: 20px; /* Adding some space below the heading */
+  color: #506cf4; /* Changing text color */
+  font-size: 40px; /* Increasing font size */
 }
 
-.dev {
+.profileinfo {
   margin-bottom: 40px;
 }
 
-.dev h2 {
-  margin-bottom: 10px;
+.profileinfo img {
+  display: block;
+  margin: 0 auto 20px; /* Centering the image horizontally */
+  border-radius: 50%;
+  max-width: 200px;
+  height: auto;
 }
 
-.dev p {
+.profileinfo h2,
+.profileinfo h3 {
+  margin-bottom: 10px; /* Add space between Name and Email */
+}
+
+.profileinfo h2:last-child {
+  margin-bottom: 0; /* Remove space after Email */
+}
+
+.profileinfo h3 {
+  display: inline; /* Place h3 text after h2 */
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+.profileinfo p {
   text-align: justify;
 }
 
@@ -468,8 +501,9 @@ h1 {
   min-height: 20px;
   margin-bottom: 5px;
   position: fixed;
-  left: 100px;
+  left: 100px; /* Adjusted value to move the button two times further to the right */
   top: 25%;
   transform: translateY(-50%);
 }
+
 /*↑ profile.html Style elements ↑*/
