@@ -17,7 +17,7 @@ function addTransaction() {
         // Check if a user is signed in:
         if (user) {
             // Do something for the currently logged-in user here: 
-            
+
             // Retrieve the user's budget from Firestore
             var userDocRef = db.collection("users").doc(user.uid);
             userDocRef.get()
@@ -28,13 +28,13 @@ function addTransaction() {
                         if (!isNaN(userBudget)) {
                             // Calculate the remaining budget
                             var budgetLeft = userBudget - transactionAmount;
-                            
+
                             // Update the budget field of the user document
                             userDocRef.update({
                                 budget: budgetLeft
                             })
-                            .then(() => console.log("Budget updated successfully"))
-                            .catch(error => console.error("Error updating budget:", error));
+                                .then(() => console.log("Budget updated successfully"))
+                                .catch(error => console.error("Error updating budget:", error));
                         } else {
                             console.error("User budget is not a valid number.");
                         }
@@ -55,7 +55,7 @@ function addTransaction() {
     // Check if a user is signed in
     var user = firebase.auth().currentUser;
     if (user) {
-        
+
         // Add transaction to the 'transactions' collection in Firestore
         db.collection("transactions").add({
             amount: transactionAmount,
@@ -63,17 +63,17 @@ function addTransaction() {
             date: transactionDate,
             description: transactionDescription,
         })
-        .then(() => {
-            // On successful addition, log success message and redirect to transaction page
-            console.log("Transaction successfully added");
-            window.location.href = "main.html";
-        })
-        .catch((error) => {
-            // If there's an error adding the transaction, log error message
-            console.error("Error adding transaction: ", error);
-            window.alert("Transaction error");
-            // Handle error gracefully, e.g., display an error message to the user
-        });
+            .then(() => {
+                // On successful addition, log success message and redirect to transaction page
+                console.log("Transaction successfully added");
+                window.location.href = "main.html";
+            })
+            .catch((error) => {
+                // If there's an error adding the transaction, log error message
+                console.error("Error adding transaction: ", error);
+                window.alert("Transaction error");
+                // Handle error gracefully, e.g., display an error message to the user
+            });
     } else {
         // If no user is signed in, redirect to the login page
         console.log("No user is signed in");
