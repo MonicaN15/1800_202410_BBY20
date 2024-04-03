@@ -23,3 +23,32 @@ for (var i = 0; i < topSpendings.length; i++) {
     // Append the <li> to the <ul>
     ul.appendChild(li);
 }
+
+firebase.auth().onAuthStateChanged(user => {
+    // Check if a user is signed in:
+    if (user) {
+        // Do something for the currently logged-in user here: 
+        
+        // Retrieve the user's budget from Firestore
+        var userDocRef = db.collection("users").doc(user.uid);
+        userDocRef.get()
+            .then(doc => {
+                if (doc.exists) {
+                    // Ensure budget is retrieved and parsed as a number
+                    var totalSpent = parseFloat(doc.data().totalMoneySpent); // Added this
+                    if (!isNaN(totalSpent)) {
+                        return totalSpent;
+                    } else {
+                        console.error("User budget is not a valid number.");
+                    }
+                } else {
+                    console.error("User document does not exist.");
+                }
+            })
+            .catch(error => console.error("Error getting user document:", error));
+    } else {
+        // No user is signed in.
+        console.log("No user is logged in");
+    }
+});
+

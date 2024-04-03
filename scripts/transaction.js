@@ -25,13 +25,18 @@ function addTransaction() {
                     if (doc.exists) {
                         // Ensure budget is retrieved and parsed as a number
                         var userBudget = parseFloat(doc.data().budget);
-                        if (!isNaN(userBudget)) {
+                        var monthlySpent = parseFloat(doc.data().currentMonthMoneySpent);
+                        var totalSpent = parseFloat(doc.data().totalMoneySpent); // Added this
+                        if (!isNaN(userBudget) && !isNaN(totalSpent)) {
                             // Calculate the remaining budget
                             var budgetLeft = userBudget - transactionAmount;
-                            
+                            var updatedMonthlySpent = monthlySpent + transactionAmount;
+                            var updatedTotalSpent = totalSpent + transactionAmount;
                             // Update the budget field of the user document
                             userDocRef.update({
-                                budget: budgetLeft
+                                budget: budgetLeft, // This upadates the budget left on firebase
+                                currentMonthMoneySpent: updatedMonthlySpent, 
+                                totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase 
                             })
                             .then(() => console.log("Budget updated successfully"))
                             .catch(error => console.error("Error updating budget:", error));
