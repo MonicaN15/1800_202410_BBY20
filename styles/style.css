@@ -1,3 +1,13 @@
+/* Code for all html body pages */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #dedcdc;
+  text-align: center;
+  /* Center aligning text */
+}
+
 .responsive {
   width: 100%;
   height: auto;
@@ -13,15 +23,22 @@
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: rgb(81, 81, 255);
 }
 
-/* centers logo */
+
+/* Crave Control logo */
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.logo img {
+  width: 700px;
+  height: auto;
+}
+
+/*no clue whats below */
 
 #welcome-back {
   text-align: center;
@@ -44,12 +61,12 @@
   margin-right: auto;
 }
 
-#amount-text{
+#amount-text {
   float: left;
   font-size: 15pt;
 }
 
-#days-text{
+#days-text {
   float: left;
   font-size: 15pt;
 }
@@ -84,14 +101,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Light grey background */
   padding: 20px;
 }
 
 .footer img {
   margin: 0 10px;
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
+  width: 50px;
+  /* Adjust size as needed */
+  height: 50px;
+  /* Adjust size as needed */
 }
 
 .footer img:hover {
@@ -108,141 +126,157 @@
 
 /*↓ monthlyspending.html Style elements ↓*/
 
-        /*Style element for monthly spending message on monthlyspending.html*/
-        #monthly-spending{
-          margin-bottom: 20px; 
-      }
+/*Style element for monthly spending message on monthlyspending.html*/
+#monthly-spending {
+  margin-bottom: 20px;
+}
 
-      /*Style element for how much money you have spent on monthlyspending.html*/
-      #money-spent-this-year{
-          display: inline-block; 
-          padding: 10px 20px;
-          background-color: #a4a4a4;
-          color: #000000;
-          border: none;
-          cursor: pointer;
-          font-size: 16px;   
-          margin-bottom: 20px;  
-      }
+/*Style element for how much money you have spent on monthlyspending.html*/
+#money-spent-this-year {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a4a4a4;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 
-      /*Style element for back button image on monthlyspending.html*/
-      #back-button-image{
-          max-width: 40px;
-          max-height: 40px;
-          min-width: 20px; 
-          min-height: 20px;
-          margin-bottom: 5px;
-      }
-  
-      /*Style element for monthly spending message container in monthlyspending.html*/
-      .monthly-spending-message-container {
-          text-align: center;
-      }
+/*Style element for back button image on monthlyspending.html*/
+#back-button-image {
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-bottom: 5px;
+  position: fixed;
+  left: 50px;
+  /* Adjust to position the button at the left side */
+  top: 25%;
+  /* Position 25% from the top of the page */
+}
 
-      /*Style elements for compare button on monthlyspending.html*/
-      .compare-button {
-          padding: 10px 20px;
-          background-color: #a4a4a4;
-          color: #000000;
-          border: none;
-          cursor: pointer;
-          font-size: 16px;
-          margin-bottom: 20px;
-      }
-      
-      /*Style element for the months button container in monthlyspending.html*/
-      .months-container {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr); 
-          gap: 10px; 
-          text-align: center;
-          margin-bottom: 10%;
-      }
+/*Style element for monthly spending message container in monthlyspending.html*/
+.monthly-spending-message-container {
+  text-align: center;
+}
 
-      /*Style element for the months button in months container in monthlyspending.html*/
-      .months-container a {
-          display: inline-block;
-          padding: 2% 10%;
-          color: #000000;
-          border: none;
-          cursor: pointer;
-          font-size: 16px;
-          text-decoration: none;
-      }
-      
+/*Style elements for compare button on monthlyspending.html*/
+.compare-button {
+  padding: 10px 20px;
+  background-color: #a4a4a4;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/*Style element for the months button container in monthlyspending.html*/
+.months-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+/*Style element for the months button in months container in monthlyspending.html*/
+.months-container a {
+  display: inline-block;
+  padding: 2% 10%;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
 /*↑ monthlyspending.html Style elements ↑*/
 
 /*↓ yearlyreport.html Style elements ↓*/
 
-      /*Style element for how much money you have spent on monthlyspending.html*/
-      #money-yearly-report {
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        width: fit-content; /* Adjust width as per content */
-        margin: 100px auto 50px; /* Center align horizontally and add top and bottom margin */
-        /* padding: 10px 20px; */
-        background-color: #a4a4a4;
-        color: #000000;
-        border: solid;
-        cursor: pointer;
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    
-    #money-yearly-report .report-heading {
-        margin-bottom: 10px; /* Add margin below the heading */
-    }
-    
-    /* Style for the graph image container */
-    .yearly-graph-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px; /* Add space between text and image */
-    }
-    
-    /* Style for the graph image */
-    .graph-image {
-        max-width: 33.33%; /* Make the image one-third of its original size */
-        max-height: 33.33%; /* Make the image one-third of its original size */
-    }
-    
-    /* Style for the top spendings container */
-    .top-yearly-spendings-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .top-yearly-spendings-container h3 {
-        margin-bottom: 10px;
-    }
-    
-    .top-yearly-spendings-container ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .top-yearly-spendings-container ul li {
-        margin-bottom: 5px;
-    }
-    
-    /*↓ yearlyreport.html Style elements ↓*/
-    
-    /*Style element for back button image on monthlyspending.html*/
-    #back-button-image{
-        max-width: 40px;
-        max-height: 40px;
-        min-width: 20px; 
-        min-height: 20px;
-        margin-bottom: 5px;
-    }
-    
-    /*Style element for monthly spending message container in monthlyspending.html*/
-    .monthly-spending-message-container {
-        text-align: center;
-    }
+/*Style element for how much money you have spent on monthlyspending.html*/
+#money-yearly-report {
+  display: flex;
+  /* Use flexbox for centering */
+  flex-direction: column;
+  /* Stack items vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  width: fit-content;
+  /* Adjust width as per content */
+  margin: 100px auto 50px;
+  /* Center align horizontally and add top and bottom margin */
+  /* padding: 10px 20px; */
+  background-color: #a4a4a4;
+  color: #000000;
+  border: solid;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#money-yearly-report .report-heading {
+  margin-bottom: 10px;
+  /* Add margin below the heading */
+}
+
+/* Style for the graph image container */
+.yearly-graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  /* Add space between text and image */
+}
+
+/* Style for the graph image */
+.graph-image {
+  max-width: 33.33%;
+  /* Make the image one-third of its original size */
+  max-height: 33.33%;
+  /* Make the image one-third of its original size */
+}
+
+/* Style for the top spendings container */
+.top-yearly-spendings-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.top-yearly-spendings-container h3 {
+  margin-bottom: 10px;
+}
+
+.top-yearly-spendings-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-yearly-spendings-container ul li {
+  margin-bottom: 5px;
+}
+
+/*↓ yearlyreport.html Style elements ↓*/
+
+/*Style element for back button image on monthlyspending.html*/
+#back-button-image {
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+/*Style element for monthly spending message container in monthlyspending.html*/
+.monthly-spending-message-container {
+  text-align: center;
+}
+
 /*↑ yearlyreport.html Style elements ↑*/
 
 /* Centers text in all the transactionforms */
@@ -252,75 +286,86 @@
 
 /*↓ monthlyreport.html Style elements ↓*/
 
-      /*Style element for how much money you have spent on monthlyspending.html*/
-      #money-monthly-report {
-        display: flex; /* Use flexbox for centering */
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        width: fit-content; /* Adjust width as per content */
-        margin: 100px auto 50px; /* Center align horizontally and add top and bottom margin */
-        /* padding: 10px 20px; */
-        background-color: #a4a4a4;
-        color: #000000;
-        border: solid;
-        cursor: pointer;
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    
-    #money-monthly-report .report-heading {
-        margin-bottom: 10px; /* Add margin below the heading */
-    }
-    
-    /* Style for the graph image container */
-    .monthly-graph-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px; /* Add space between text and image */
-    }
-    
-    /* Style for the graph image */
-    .graph-image {
-        max-width: 33.33%; /* Make the image one-third of its original size */
-        max-height: 33.33%; /* Make the image one-third of its original size */
-    }
-    
-    /* Style for the top spendings container */
-    .top-monthly-spendings-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .top-monthly-spendings-container h3 {
-        margin-bottom: 10px;
-    }
-    
-    .top-monthly-spendings-container ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .top-monthlyspendings-container ul li {
-        margin-bottom: 5px;
-    }
-    
-    /*↓ yearlyreport.html Style elements ↓*/
-    
-    /*Style element for back button image on monthlyspending.html*/
-    #back-button-image{
-        max-width: 40px;
-        max-height: 40px;
-        min-width: 20px; 
-        min-height: 20px;
-        margin-bottom: 5px;
-    }
-    
-    /*Style element for monthly spending message container in monthlyspending.html*/
-    .monthly-spending-message-container {
-        text-align: center;
-    }
+/*Style element for how much money you have spent on monthlyspending.html*/
+#money-monthly-report {
+  display: flex;
+  /* Use flexbox for centering */
+  flex-direction: column;
+  /* Stack items vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  width: fit-content;
+  /* Adjust width as per content */
+  margin: 100px auto 50px;
+  /* Center align horizontally and add top and bottom margin */
+  /* padding: 10px 20px; */
+  background-color: #a4a4a4;
+  color: #000000;
+  border: solid;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#money-monthly-report .report-heading {
+  margin-bottom: 10px;
+  /* Add margin below the heading */
+}
+
+/* Style for the graph image container */
+.monthly-graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  /* Add space between text and image */
+}
+
+/* Style for the graph image */
+.graph-image {
+  max-width: 33.33%;
+  /* Make the image one-third of its original size */
+  max-height: 33.33%;
+  /* Make the image one-third of its original size */
+}
+
+/* Style for the top spendings container */
+.top-monthly-spendings-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.top-monthly-spendings-container h3 {
+  margin-bottom: 10px;
+}
+
+.top-monthly-spendings-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-monthlyspendings-container ul li {
+  margin-bottom: 5px;
+}
+
+/*↓ yearlyreport.html Style elements ↓*/
+
+/*Style element for back button image on monthlyspending.html*/
+#back-button-image {
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+/*Style element for monthly spending message container in monthlyspending.html*/
+.monthly-spending-message-container {
+  text-align: center;
+}
+
 /*↑ yearlyreport.html Style elements ↑*/
 
 /*↓ comparemonths.html Style elements ↓*/
@@ -339,7 +384,8 @@
 
 .comparison-side {
   margin: 0 10px;
-  text-align: center; /* Center the text within each side */
+  text-align: center;
+  /* Center the text within each side */
 }
 
 .side-title {
@@ -361,23 +407,16 @@
 
 /*↑ comparemonths.html Style elements ↑*/
 
-/*↓ aboutus.html Style elements ↓*/
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  text-align: center; /* Center aligning text */
-}
-
-.maincontainer {
+.aboutusmaincontainer {
   max-width: 800px;
-  margin: 20px auto; /* Centering the container horizontally */
+  margin: 20px auto;
+  /* Centering the container horizontally */
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: left; /* Resetting text alignment to left for content within the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  /* Resetting text alignment to left for content within the container */
 }
 
 h1 {
@@ -390,17 +429,102 @@ h1 {
 
 .dev img {
   display: block;
+  margin: 0 auto 20px;
+  /* Centering the image horizontally */
+  border-radius: 50%;
+  max-width: 200px;
+  height: auto;
+}
+
+.dev h2,
+.dev h3 {
+  margin-bottom: 10px; /* Add space between Name and Email */
+}
+
+.dev h2:last-child {
+  margin-bottom: 0; /* Remove space after Email */
+}
+
+.dev h3 {
+  display: inline; /* Place h3 text after h2 */
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+.dev p {
+  text-align: justify;
+}
+
+#back-button-image-aboutus {
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-bottom: 5px;
+  position: fixed;
+  left: 100px;
+  /* Adjusted value to move the button two times further to the right */
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+/*↑ aboutus.html Style elements ↑*/
+
+/*↓ profile.html Style elements ↓*/
+.profilemaincontainer {
+  max-width: 800px;
+  margin: 20px auto; /* Centering the container horizontally */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left; /* Resetting text alignment to left for content within the container */
+}
+
+h1 {
+  margin-bottom: 20px; /* Adding some space below the heading */
+  color: #506cf4; /* Changing text color */
+  font-size: 40px; /* Increasing font size */
+}
+
+.profileinfo {
+  margin-bottom: 40px;
+}
+
+.profileinfo img {
+  display: block;
   margin: 0 auto 20px; /* Centering the image horizontally */
   border-radius: 50%;
   max-width: 200px;
   height: auto;
 }
 
-.dev h2 {
-  margin-bottom: 10px;
+.profileinfo h2,
+.profileinfo h3 {
+  margin-bottom: 10px; /* Add space between Name and Email */
 }
 
-.dev p {
+.profileinfo h2:last-child {
+  margin-bottom: 0; /* Remove space after Email */
+}
+
+.profileinfo h3 {
+  display: inline; /* Place h3 text after h2 */
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+.profileinfo p {
   text-align: justify;
 }
-/*↑ aboutus.html Style elements ↑*/
+
+#back-button-image-aboutus {
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 20px; 
+  min-height: 20px;
+  margin-bottom: 5px;
+  position: fixed;
+  left: 100px; /* Adjusted value to move the button two times further to the right */
+  top: 25%;
+  transform: translateY(-50%);
+}
+/*↑ profile.html Style elements ↑*/
