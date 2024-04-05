@@ -11,17 +11,31 @@ function divide() {
     document.getElementById("budget").innerText = "Budget is: $" + quotient + " per day";
 
     let totalBudget = amountInput;
+    
+    // Get current date
+    var currentDate = new Date();
+
+    // Array of month names
+    var monthNames = [
+        "January", "February", "March", "April", "May", "June", "July",
+        "August", "September", "October", "November", "December"
+    ];
+
+    // Get the current month
+    var currentMonth = monthNames[currentDate.getMonth()];
 
     // Check if a user is signed in
     var user = firebase.auth().currentUser;
     if (user) {
-        // Reference to the specific user document
-        var userDocRef = db.collection("users").doc(user.uid);
+    // Reference to the specific user document
+    var userDocRef = db.collection("users").doc(user.uid);
 
+    if (currentMonth == "April") {
         // Update the budget field of the user document
         userDocRef.update({
-            budget: totalBudget
-        })
+                budget: totalBudget,
+                aprilBudget: totalBudget
+            })
             .then(() => {
                 // On successful update, log success message and redirect to main page
                 console.log("Budget successfully updated");
@@ -32,11 +46,11 @@ function divide() {
                 console.error("Error updating budget: ", error);
                 // Handle error gracefully, e.g., display an error message to the user
             });
+        }
     } else {
         // If no user is signed in, redirect to the login page
         console.log("No user is signed in");
         window.location.href = 'index.html';
     }
-
 
 }

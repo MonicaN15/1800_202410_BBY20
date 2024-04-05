@@ -12,6 +12,21 @@ function addTransaction() {
     let transactionAmount = parseFloat(document.getElementById("transamount").value);
     let transactionCategory = document.getElementById("transcategory").value;
 
+
+    // Get current date
+    var currentDate = new Date();
+
+    // Array of month names
+    var monthNames = [
+        "January", "February", "March", "April", "May", "June", "July",
+        "August", "September", "October", "November", "December"
+    ];
+
+    // Get the current month
+    var currentMonth = monthNames[currentDate.getMonth()];
+
+
+
     // This gets the old user budget from firebase and updates it and returns it to firebase 
     firebase.auth().onAuthStateChanged(user => {
         // Check if a user is signed in:
@@ -27,14 +42,50 @@ function addTransaction() {
                         var userBudget = parseFloat(doc.data().budget);
                         var monthlySpent = parseFloat(doc.data().currentMonthMoneySpent);
                         var totalSpent = parseFloat(doc.data().totalMoneySpent); // Added this
+
+                        if (currentMonth == "March") {
+                            if (!isNaN(userBudget) && !isNaN(totalSpent)) {
+                                // Calculate the remaining budget
+                                //var budgetLeft = userBudget - transactionAmount;
+                                
+                                // Update the budget field of the user document
+                                userDocRef.update({
+                                    marchBudget: 16.6, // This upadates the budget left on firebase
+                                    //totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
+                                })
+                                    .then(() => console.log("March budget updated successfully"))
+                                    .catch(error => console.error("Error updating March budget:", error));
+                            } else {
+                                console.error("User budget is not a valid number.");
+                            }
+                        }
+
+                        if (currentMonth == "April") {
+                            if (!isNaN(userBudget) && !isNaN(totalSpent)) {
+                                // Calculate the remaining budget
+                                //var budgetLeft = userBudget - transactionAmount;
+                                
+                                // Update the budget field of the user document
+                                userDocRef.update({
+                                    aprilBudget: 18.6, // This updates the budget left on firebase
+                                    //totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
+                                })
+                                    .then(() => console.log("April budget updated successfully"))
+                                    .catch(error => console.error("Error updating April budget:", error));
+                            } else {
+                                console.error("User budget is not a valid number.");
+                            }
+                        }
+
+                        
                         if (!isNaN(userBudget) && !isNaN(totalSpent)) {
                             // Calculate the remaining budget
                             var budgetLeft = userBudget - transactionAmount;
                             
                             // Update the budget field of the user document
                             userDocRef.update({
-                                budget: budgetLeft, // This upadates the budget left on firebase
-                                currentMonthMoneySpent: updatedMonthlySpent, 
+                                budget: budgetLeft, // This updates the budget left on firebase
+                                currentMonthMoneySpent: updatedMonthlySpent, // This updates the current monthly budget 
                                 totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase 
                             })
                                 .then(() => console.log("Budget updated successfully"))
@@ -52,6 +103,8 @@ function addTransaction() {
             console.log("No user is logged in");
         }
     });
+
+
 
     // Log transaction details for debugging
     console.log(transactionDate, transactionDescription, transactionAmount, transactionCategory);
@@ -84,3 +137,48 @@ function addTransaction() {
         window.location.href = 'index.html';
     }
 }
+
+/*
+// This gets the old user budget from firebase and updates it and returns it to firebase 
+    firebase.auth().onAuthStateChanged(user => {
+        // Check if a user is signed in:
+        if (user) {
+            // Do something for the currently logged-in user here: 
+
+            // Retrieve the user's budget from Firestore
+            var userDocRef = db.collection("users").doc(user.uid);
+            userDocRef.get()
+                .then(doc => {
+                    if (doc.exists) {
+                        // Ensure budget is retrieved and parsed as a number
+                        var userBudget = parseFloat(doc.data().budget);
+                        var monthlySpent = parseFloat(doc.data().currentMonthMoneySpent);
+                        var totalSpent = parseFloat(doc.data().totalMoneySpent); // Added this
+                        if (!isNaN(userBudget) && !isNaN(totalSpent)) {
+                            // Calculate the remaining budget
+                            var budgetLeft = userBudget - transactionAmount;
+                            
+                            // Update the budget field of the user document
+                            userDocRef.update({
+                                budget: budgetLeft, // This upadates the budget left on firebase
+                                currentMonthMoneySpent: updatedMonthlySpent, // This updates the current monthly budget 
+                                totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase 
+                            })
+                                .then(() => console.log("Budget updated successfully"))
+                                .catch(error => console.error("Error updating budget:", error));
+                        } else {
+                            console.error("User budget is not a valid number.");
+                        }
+                    } else {
+                        console.error("User document does not exist.");
+                    }
+                })
+                .catch(error => console.error("Error getting user document:", error));
+        } else {
+            // No user is signed in.
+            console.log("No user is logged in");
+        }
+    });
+
+
+ */
