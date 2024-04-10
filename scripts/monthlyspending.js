@@ -130,9 +130,10 @@ function confirmDelete() {
                 console.log("No user is signed in");
                 window.location.href = 'index.html';
             }
+        alert("User transactions and budget deleted");
     } else {
         // If canceled, do nothing or provide feedback
-        alert("Deletion canceled.");
+        alert("Deletion canceled");
     }
 }
 
