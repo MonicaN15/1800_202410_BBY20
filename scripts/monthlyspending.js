@@ -86,7 +86,7 @@ function confirmDelete() {
 
                 // Update the budget field of the user document
                 userDocRef.update({
-                    //budget: DEFAULT_VALUE,
+                    budget: DEFAULT_VALUE,
                     totalMoneySpent: DEFAULT_VALUE,
                     //currentMonthMoneySpent: DEFAULT_VALUE,
                     januaryBudget: DEFAULT_VALUE,
