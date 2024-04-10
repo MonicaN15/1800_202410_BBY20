@@ -1,11 +1,24 @@
-/* Code for all html body pages */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #dedcdc;
+  background-color: #dedcdccb;
   text-align: center;
-  /* Center aligning text */
+  position: relative; /* Ensure position relative for absolute positioning */
+}
+
+/* Create a pseudo-element to overlay the blurred background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/10/78/61/95/3/700_FO107861953_4fbb9333efac26f172231c15d8c0934c.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-thin-line-icons-seamless-pattern-food-vegetables-and-fruits-icon-grey-background-for-websites-apps-presentations-cards-templates-or-blogs.jpg.jpg');  
+  background-size: cover;
+  filter: blur(3px); /* Adjust the blur intensity as needed */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
 }
 
 .responsive {
@@ -22,9 +35,9 @@ body {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  border-radius: 5px;
   cursor: pointer;
 }
-
 
 /* Crave Control logo */
 .logo {
@@ -34,8 +47,45 @@ body {
 }
 
 .logo img {
-  width: 700px;
-  height: auto;
+  max-width: 600px; /* Set maximum width to 90% of its container */
+  min-width: 250px; /* Set minimum width for the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.background {
+  /* Background image */
+  /* background-image: url('https://img.pixers.pics/pho_wat(s3:700/FO/10/78/61/95/3/700_FO107861953_4fbb9333efac26f172231c15d8c0934c.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/posters-thin-line-icons-seamless-pattern-food-vegetables-and-fruits-icon-grey-background-for-websites-apps-presentations-cards-templates-or-blogs.jpg.jpg');  */
+  /* background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+  background-size: cover; 
+  background-position: center; 
+}
+
+.text {
+  /* Example styles for text */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* CSS styles for the delete button */
+.delete-button {
+  background-color: #888888; /* Light blue background color */
+  color: #000000; /* Dark red text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* Hover effect */
+.delete-button:hover {
+  background-color: #a93f3f; /* Brighter blue on hover */
 }
 
 /*no clue whats below */
@@ -61,27 +111,25 @@ body {
   margin-right: auto;
 }
 
-#amount-text {
-  float: left;
-  font-size: 15pt;
+#set-budget-text {
+  font-weight: bold; 
+  color: #333; 
+  text-align: center;
+  margin-bottom: 20px; 
 }
 
-#days-text {
-  float: left;
+#amount-text {
   font-size: 15pt;
+  margin-bottom: 10px; 
+  margin-right: 10%;
+  font-weight: bold;
 }
 
 #amount-input {
   height: 20px;
   width: 70px;
-  float: right;
 }
 
-#days-input {
-  height: 20px;
-  width: 70px;
-  float: right;
-}
 
 #submit-button {
   padding: 8px 25px;
@@ -89,7 +137,9 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  font-weight: bold;
+  border-radius: 5px;
+  background-color: #0080ff; /* Change to your desired background color */
+  color: #ffffff; /* Change to your desired text color */
 }
 
 /* Styles for the footer */
@@ -135,7 +185,7 @@ body {
 #money-spent-this-year {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #a4a4a4;
+  background-color: #888888;
   color: #000000;
   border: none;
   cursor: pointer;
@@ -165,7 +215,7 @@ body {
 /*Style elements for compare button on monthlyspending.html*/
 .compare-button {
   padding: 10px 20px;
-  background-color: #a4a4a4;
+  background-color: #888888;
   color: #000000;
   border: none;
   cursor: pointer;
@@ -179,7 +229,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   text-align: center;
-  margin-bottom: 10%;
+  margin-bottom: 20px;
 }
 
 /*Style element for the months button in months container in monthlyspending.html*/
@@ -212,7 +262,7 @@ body {
   margin: 100px auto 50px;
   /* Center align horizontally and add top and bottom margin */
   /* padding: 10px 20px; */
-  background-color: #a4a4a4;
+  background-color: #888888;
   color: #000000;
   border: solid;
   cursor: pointer;
@@ -301,7 +351,7 @@ body {
   margin: 100px auto 50px;
   /* Center align horizontally and add top and bottom margin */
   /* padding: 10px 20px; */
-  background-color: #a4a4a4;
+  background-color: #888888;
   color: #000000;
   border: solid;
   cursor: pointer;
@@ -474,15 +524,16 @@ h1 {
   max-width: 800px;
   margin: 20px auto; /* Centering the container horizontally */
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: left; /* Resetting text alignment to left for content within the container */
 }
 
 h1 {
+  text-align: center;
   margin-bottom: 20px; /* Adding some space below the heading */
-  color: #506cf4; /* Changing text color */
+  color: #000000; /* Changing text color */
   font-size: 40px; /* Increasing font size */
 }
 

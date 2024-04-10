@@ -1,6 +1,8 @@
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
+const DEFAULT_VALUE = 0;
+
 var uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function (authResult, redirectUrl) {
@@ -20,37 +22,33 @@ var uiConfig = {
         db.collection("users").doc(user.uid).set({         //write to firestore. We are using the UID for the ID in users collection
           name: user.displayName,                    //"users" collection
           email: user.email,                         //with authenticated user's ID (user.uid)
-          budget: 0,
-          totalMoneySpent: 0,
-          currentMonthMoneySpent: 0,
-          januaryBudget: 0,
-          februaryBudget: 0,
-          marchBudget: 0,
-          aprilBudget: 0,
-          mayBudget: 0,
-          juneBudget: 0,
-          julyBudget: 0,
-          augustBudget: 0,
-          septemberBudget: 0,
-          octoberBudget: 0,
-          novemberBudget: 0,
-          decemberBudget: 0,
-          januaryTotalMoneySpent: 0,
-          februaryTotalMoneySpent: 0,
-          marchMoneySpent: 0,
-          aprilMoneySpent: 0,
-          mayMoneySpent: 0,
-          juneMoneySpent: 0,
-          julyMoneySpent: 0,
-          augustMoneySpent: 0,
-          septemberMoneySpent: 0,
-          octoberMoneySpent: 0,
-          novemberMoneySpent: 0,
-          decemberMoneySpent: 0
-
-          //city: "Vancouver",                      //optional default profile info 
-          //country: "Canada",                      //optional default profile info      
-          //school: "BCIT"                          //optional default profile info
+          //budget: 0,
+          totalMoneySpent: DEFAULT_VALUE,
+          //currentMonthMoneySpent: 0,
+          januaryBudget: DEFAULT_VALUE,
+          februaryBudget: DEFAULT_VALUE,
+          marchBudget: DEFAULT_VALUE,
+          aprilBudget: DEFAULT_VALUE,
+          mayBudget: DEFAULT_VALUE,
+          juneBudget: DEFAULT_VALUE,
+          julyBudget: DEFAULT_VALUE,
+          augustBudget: DEFAULT_VALUE,
+          septemberBudget: DEFAULT_VALUE,
+          octoberBudget: DEFAULT_VALUE,
+          novemberBudget: DEFAULT_VALUE,
+          decemberBudget: DEFAULT_VALUE,
+          januaryTotalMoneySpent: DEFAULT_VALUE,
+          februaryTotalMoneySpent: DEFAULT_VALUE,
+          marchMoneySpent: DEFAULT_VALUE,
+          aprilMoneySpent: DEFAULT_VALUE,
+          mayMoneySpent: DEFAULT_VALUE,
+          juneMoneySpent: DEFAULT_VALUE,
+          julyMoneySpent: DEFAULT_VALUE,
+          augustMoneySpent: DEFAULT_VALUE,
+          septemberMoneySpent: DEFAULT_VALUE,
+          octoberMoneySpent: DEFAULT_VALUE,
+          novemberMoneySpent: DEFAULT_VALUE,
+          decemberMoneySpent: DEFAULT_VALUE
         }).then(function () {
           console.log("New user added to firestore");
           window.location.assign("main.html");       //re-direct to main.html after signup

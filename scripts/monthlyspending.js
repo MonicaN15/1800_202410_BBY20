@@ -73,4 +73,68 @@ firebase.auth().onAuthStateChanged((user) => {
     }
 });
 
+const DEFAULT_VALUE = 0;
+
+function confirmDelete() {
+    // Check if a user is signed in
+    var user = firebase.auth().currentUser;
+    if (confirm("Are you sure you want to delete all transactions and budget data?")) {
+        // If confirmed, perform deletion logic here
+        if (user) {
+            // Reference to the specific user document
+            var userDocRef = db.collection("users").doc(user.uid);
+
+                // Update the budget field of the user document
+                userDocRef.update({
+                    //budget: DEFAULT_VALUE,
+                    totalMoneySpent: DEFAULT_VALUE,
+                    //currentMonthMoneySpent: DEFAULT_VALUE,
+                    januaryBudget: DEFAULT_VALUE,
+                    februaryBudget: DEFAULT_VALUE,
+                    marchBudget: DEFAULT_VALUE,
+                    aprilBudget: DEFAULT_VALUE,
+                    mayBudget: DEFAULT_VALUE,
+                    juneBudget: DEFAULT_VALUE,
+                    julyBudget: DEFAULT_VALUE,
+                    augustBudget: DEFAULT_VALUE,
+                    septemberBudget: DEFAULT_VALUE,
+                    octoberBudget: DEFAULT_VALUE,
+                    novemberBudget: DEFAULT_VALUE,
+                    decemberBudget: DEFAULT_VALUE,
+                    januaryTotalMoneySpent: DEFAULT_VALUE,
+                    februaryTotalMoneySpent: DEFAULT_VALUE,
+                    marchMoneySpent: DEFAULT_VALUE,
+                    aprilMoneySpent: DEFAULT_VALUE,
+                    mayMoneySpent: DEFAULT_VALUE,
+                    juneMoneySpent: DEFAULT_VALUE,
+                    julyMoneySpent: DEFAULT_VALUE,
+                    augustMoneySpent: DEFAULT_VALUE,
+                    septemberMoneySpent: DEFAULT_VALUE,
+                    octoberMoneySpent: DEFAULT_VALUE,
+                    novemberMoneySpent: DEFAULT_VALUE,
+                    decemberMoneySpent: DEFAULT_VALUE
+                    })
+                    .then(() => {
+                        // On successful update, log success message and redirect to main page
+                        console.log("Budget successfully updated");
+                        window.location.href = "main.html";
+                    })
+                    .catch((error) => {
+                        // If there's an error updating the budget, log error message
+                        console.error("Error updating budget: ", error);
+                        // Handle error gracefully, e.g., display an error message to the user
+                    });
+                
+            } else {
+                // If no user is signed in, redirect to the login page
+                console.log("No user is signed in");
+                window.location.href = 'index.html';
+            }
+        alert("Item deleted!");
+    } else {
+        // If canceled, do nothing or provide feedback
+        alert("Deletion canceled.");
+    }
+}
+
 
