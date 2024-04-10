@@ -130,7 +130,6 @@ function confirmDelete() {
                 console.log("No user is signed in");
                 window.location.href = 'index.html';
             }
-        alert("Item deleted!");
     } else {
         // If canceled, do nothing or provide feedback
         alert("Deletion canceled.");
