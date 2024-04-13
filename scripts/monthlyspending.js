@@ -86,9 +86,7 @@ function confirmDelete() {
 
                 // Update the budget field of the user document
                 userDocRef.update({
-                    budget: DEFAULT_VALUE,
                     totalMoneySpent: DEFAULT_VALUE,
-                    //currentMonthMoneySpent: DEFAULT_VALUE,
                     januaryBudget: DEFAULT_VALUE,
                     februaryBudget: DEFAULT_VALUE,
                     marchBudget: DEFAULT_VALUE,
@@ -101,8 +99,8 @@ function confirmDelete() {
                     octoberBudget: DEFAULT_VALUE,
                     novemberBudget: DEFAULT_VALUE,
                     decemberBudget: DEFAULT_VALUE,
-                    januaryTotalMoneySpent: DEFAULT_VALUE,
-                    februaryTotalMoneySpent: DEFAULT_VALUE,
+                    januaryMoneySpent: DEFAULT_VALUE,
+                    februaryMoneySpent: DEFAULT_VALUE,
                     marchMoneySpent: DEFAULT_VALUE,
                     aprilMoneySpent: DEFAULT_VALUE,
                     mayMoneySpent: DEFAULT_VALUE,
@@ -136,5 +134,3 @@ function confirmDelete() {
         alert("Deletion canceled");
     }
 }
-
-

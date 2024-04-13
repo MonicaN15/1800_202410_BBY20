@@ -11,15 +11,6 @@ function getNameFromAuth() {
             console.log(user.displayName);  // Print the user name in the browser console
             userName = user.displayName;
 
-            
-            // Method #1: Insert with JavaScript
-            // document.getElementById("name-goes-here").innerText = userName;    
-
-            // Method #2: Insert using jQuery
-            // $("#name-goes-here").text(userName); // Using jQuery
-
-            // Method #3: Insert using querySelector
-
             document.querySelector("#name-goes-here").innerText = userName;
             //document.querySelector("#monthy-user-budget").innerText = uBudget;
             
@@ -61,7 +52,7 @@ function displayMonthlyBudget() {
                     if (doc.exists) {
                         const userData = doc.data();
 
-                        // Get the budget based on the current month
+                        // Get the budget of the current month
                         let currentBudget;
 
                         // Use the current month to determine which budget to retrieve
@@ -111,16 +102,22 @@ function displayMonthlyBudget() {
                         const formattedBudget = parseFloat(currentBudget).toFixed(2);
                         document.querySelector("#monthly-budget-left").innerText = `$${formattedBudget}`;
                     } else {
+                        // User document not found
                         console.log("User document not found");
+                        // Display message indicating budget is not available
                         document.querySelector("#monthly-budget-left").innerText = "Budget not available";
                     }
                 })
                 .catch(error => {
+                    // Error getting user document
                     console.log("Error getting user document:", error);
+                    // Display error message for budget
                     document.querySelector("#monthly-budget-left").innerText = "Error fetching budget";
                 });
         } else {
+            // No user is logged in
             console.log("No user is logged in");
+            // Display message indicating user is not logged in
             document.querySelector("#monthly-budget-left").innerText = "User not logged in";
         }
     });

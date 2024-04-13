@@ -3,7 +3,7 @@
 
 <head>
     <title>Crave Control</title>
-    <meta name="comp180 project" content="My 1800 App">
+    <meta name="comp1800 project" content="My 1800 App">
 
     <!------------------------>
     <!-- Required meta tags -->
@@ -35,7 +35,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 
 </head>
 
@@ -45,39 +45,40 @@
     <!------------------------------>
 
     <!-- our own navbar goes here -->
-    <nav id="navbarPlaceholder"></nav>
+    <nav id="navbarPlaceholder"></nav> <br>
 
-    <div class="back-button">
-        <a href="main.html">
-          <img id="back-button-image-aboutus" src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back button image">
-        </a>
-      </div>
-        <div class="aboutusmaincontainer">
-            <h1>About Us</h1>
-            <div class="dev">
-                <h2>Jaskunwar Hunjan</h2>
-                <p>Main backend coder</p>
-            </div>
-            <div class="dev">
-                <h2>Monica</h2>
-                <p>Project leader</p>
-            </div>
-            <div class="dev">
-                <h2>Max</h2>
-                <p>Design/CSS</p>
-            </div>
+    <!-- the body of your page goes here -->
+    <!-- stuff -->
+    <div class="container">
+        <h1>Let's Login!</h1>
+    </div>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+
+    <!-- our own footer goes here-->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+        <link rel="stylesheet" href="/styles/style.css">
+
+        <div class="footer bg-primary">
+            <p class="col-md-4 mb-0 text-muted">&copy; 2024 Crave Control</p>
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
         </div>
-</body>
-</html>
-<!-- our own footer goes here-->
-<nav id="footerPlaceholder"></nav>
 
-<!---------------------------------------------->
-<!-- Your own JavaScript functions go here    -->
-<!---------------------------------------------->
-<script src="./scripts/firebaseAPI_BBY20.js"></script>
-<script src="./scripts/skeleton.js"></script>
-<script src="./scripts/profile.js"></script>
+    </footer>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="../scripts/firebaseAPI_BBY20.js"></script>
+    <script src="../scripts/skeleton.js"></script>
+    <script src="../scripts/authentication.js"></script>
 
 </body>
+
 </html>

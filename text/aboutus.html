@@ -3,7 +3,7 @@
 
 <head>
     <title>Crave Control</title>
-    <meta name="comp1800 project" content="My 1800 App">
+    <meta name="comp180 project" content="My 1800 App">
 
     <!------------------------>
     <!-- Required meta tags -->
@@ -35,7 +35,7 @@
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 
 </head>
 
@@ -46,48 +46,32 @@
 
     <!-- our own navbar goes here -->
     <nav id="navbarPlaceholder"></nav>
+        <div class="aboutusmaincontainer">
+            <h1>About Us</h1>
+            <div class="dev">
+                <h2>Jaskunwar Hunjan</h2>
+                <p>Main backend coder.</p>
+            </div>
+            <div class="dev">
+                <h2>Monica</h2>
+                <p>Project leader.</p>
+            </div>
+            <div class="dev">
+                <h2>Max</h2>
+                <p>Design/CSS.</p>
+            </div>
+        </div>
+</body>
+</html>
+<!-- our own footer goes here-->
+<nav id="footerPlaceholder"></nav>
 
-    <!-- the body of your page goes here -->
-    <!-- stuff -->
-
-    <br>
-
-    <br>
-<!--The back button of the page that leads to the previous page-->
-<div class="back-button">
-  <a href="javascript:history.go(-1)">
-    <img id="back-button-image" src="https://cdn-icons-png.flaticon.com/512/93/93634.png" alt="Back button image">
-  </a>
-</div>
-
-<br>
-
-    <div id="addtrans">
-        <h1>Are you eating out today?</h1>
-    </div>
-
-    <br>
-
-    <div id="yesno">
-        <a href="transaction.html" class="button bg-primary" type="button"
-            onclick="saveTransactionAndRedirect()">YES</a>
-
-        <a href="congrats.html" class="button bg-primary" type="button">NO</a>
-
-    </div>
-
-
-    <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
-
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_BBY20.js"></script>
-    <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/transaction.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
+<!---------------------------------------------->
+<!-- Your own JavaScript functions go here    -->
+<!---------------------------------------------->
+<script src="../scripts/firebaseAPI_BBY20.js"></script>
+<script src="../scripts/skeleton.js"></script>
+<script src="../scripts/profile.js"></script>
 
 </body>
-
 </html>

@@ -22,9 +22,8 @@ var uiConfig = {
         db.collection("users").doc(user.uid).set({         //write to firestore. We are using the UID for the ID in users collection
           name: user.displayName,                    //"users" collection
           email: user.email,                         //with authenticated user's ID (user.uid)
-          //budget: 0,
+          // Set default values for budget and money spent for each month
           totalMoneySpent: DEFAULT_VALUE,
-          //currentMonthMoneySpent: 0,
           januaryBudget: DEFAULT_VALUE,
           februaryBudget: DEFAULT_VALUE,
           marchBudget: DEFAULT_VALUE,

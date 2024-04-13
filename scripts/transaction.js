@@ -40,9 +40,7 @@ function addTransaction() {
                     if (doc.exists) {
                         // Ensure budget is retrieved and parsed as a number
                         var userBudget = parseFloat(doc.data().budget);
-                        var monthlySpent = parseFloat(doc.data().currentMonthMoneySpent);
-                        var totalSpent = parseFloat(doc.data().totalMoneySpent); // Added this
-                        //var budgetLeft = userBudget - transactionAmount; // This works
+                        var totalSpent = parseFloat(doc.data().totalMoneySpent); 
                         var updatedTotalSpent = totalSpent + transactionAmount;
                         
                         var januaryOldSpent = parseFloat(doc.data().januaryMoneySpent);
@@ -317,8 +315,8 @@ function addTransaction() {
                             
                             // Update the budget field of the user document
                             userDocRef.update({
-                                budget: budgetLeft, // This updates the budget left on firebase
-                                currentMonthMoneySpent: updatedMonthlySpent, // This updates the current monthly budget 
+                                //budget: budgetLeft, // This updates the budget left on firebase
+                                //currentMonthMoneySpent: updatedMonthlySpent, // This updates the current monthly budget 
                                 totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase 
                             })
                                 .then(() => console.log("Budget updated successfully"))
@@ -370,48 +368,3 @@ function addTransaction() {
         window.location.href = 'index.html';
     }
 }
-
-/*
-// This gets the old user budget from firebase and updates it and returns it to firebase 
-    firebase.auth().onAuthStateChanged(user => {
-        // Check if a user is signed in:
-        if (user) {
-            // Do something for the currently logged-in user here: 
-
-            // Retrieve the user's budget from Firestore
-            var userDocRef = db.collection("users").doc(user.uid);
-            userDocRef.get()
-                .then(doc => {
-                    if (doc.exists) {
-                        // Ensure budget is retrieved and parsed as a number
-                        var userBudget = parseFloat(doc.data().budget);
-                        var monthlySpent = parseFloat(doc.data().currentMonthMoneySpent);
-                        var totalSpent = parseFloat(doc.data().totalMoneySpent); // Added this
-                        if (!isNaN(userBudget) && !isNaN(totalSpent)) {
-                            // Calculate the remaining budget
-                            var budgetLeft = userBudget - transactionAmount;
-                            
-                            // Update the budget field of the user document
-                            userDocRef.update({
-                                budget: budgetLeft, // This upadates the budget left on firebase
-                                currentMonthMoneySpent: updatedMonthlySpent, // This updates the current monthly budget 
-                                totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase 
-                            })
-                                .then(() => console.log("Budget updated successfully"))
-                                .catch(error => console.error("Error updating budget:", error));
-                        } else {
-                            console.error("User budget is not a valid number.");
-                        }
-                    } else {
-                        console.error("User document does not exist.");
-                    }
-                })
-                .catch(error => console.error("Error getting user document:", error));
-        } else {
-            // No user is signed in.
-            console.log("No user is logged in");
-        }
-    });
-
-
- */
