@@ -24,7 +24,7 @@ var uiConfig = {
           totalMoneySpent: 0,
           currentMonthMoneySpent: 0,
           januaryBudget: 0,
-          febuaryBudget: 0,
+          februaryBudget: 0,
           marchBudget: 0,
           aprilBudget: 0,
           mayBudget: 0,
@@ -34,7 +34,19 @@ var uiConfig = {
           septemberBudget: 0,
           octoberBudget: 0,
           novemberBudget: 0,
-          decemberBudget: 0
+          decemberBudget: 0,
+          januaryTotalMoneySpent: 0,
+          februaryTotalMoneySpent: 0,
+          marchMoneySpent: 0,
+          aprilMoneySpent: 0,
+          mayMoneySpent: 0,
+          juneMoneySpent: 0,
+          julyMoneySpent: 0,
+          augustMoneySpent: 0,
+          septemberMoneySpent: 0,
+          octoberMoneySpent: 0,
+          novemberMoneySpent: 0,
+          decemberMoneySpent: 0
 
           //city: "Vancouver",                      //optional default profile info 
           //country: "Canada",                      //optional default profile info      
