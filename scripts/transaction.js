@@ -63,13 +63,13 @@ function addTransaction() {
                                 // Calculate the remaining budget
 
                                 var januaryOldBudget = parseFloat(doc.data().januaryBudget);
-                                var budgetLeft = januaryOldBudget - transactionAmount; 
+                                var januaryBudgetLeft = januaryOldBudget - transactionAmount; 
 
                                 januaryUpdatedMoneySpent = januaryOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    januaryBudget: budgetLeft, // This upadates the budget left on firebase
+                                    januaryBudget: januaryBudgetLeft, // This upadates the budget left on firebase
                                     januaryMoneySpent: januaryUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
@@ -83,15 +83,14 @@ function addTransaction() {
                         if (currentMonth == "February") {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(februaryOldSpent)) {
                                 // Calculate the remaining budget
-                                //var budgetLeft = userBudget - transactionAmount; 
                                 var februaryOldBudget = parseFloat(doc.data().februaryBudget);
-                                var februaryBudgetLeft = februaryOldBudget - transactionAmount; 
-
+                                var febuaryBudgetLeft = februaryOldBudget - transactionAmount;
+                                
                                 februaryUpdatedMoneySpent = februaryOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    februaryBudget: februaryBudgetLeft, // This upadates the budget left on firebase
+                                    februaryBudget: febuaryBudgetLeft, // This upadates the budget left on firebase
                                     februaryMoneySpent: februaryUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
@@ -128,13 +127,13 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(aprilOldSpent)) {
                                 // Calculate the remaining budget
                                 var aprilOldBudget = parseFloat(doc.data().aprilBudget);
-                                var budgetLeft = aprilOldBudget - transactionAmount;
+                                var aprilBudgetLeft = aprilOldBudget - transactionAmount;
                                 
                                 aprilUpdatedMoneySpent = aprilOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    aprilBudget: budgetLeft, // This upadates the budget left on firebase
+                                    aprilBudget: aprilBudgetLeft, // This upadates the budget left on firebase
                                     aprilMoneySpent: aprilUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
@@ -149,17 +148,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(mayOldSpent)) {
                                 // Calculate the remaining budget
                                 var mayOldBudget = parseFloat(doc.data().mayBudget);
-                                var budgetLeft = mayOldBudget - transactionAmount;
+                                var mayBudgetLeft = mayOldBudget - transactionAmount;
                                 
                                 mayUpdatedMoneySpent = mayOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    mayBudget: budgetLeft, // This upadates the budget left on firebase
+                                    mayBudget: mayBudgetLeft, // This upadates the budget left on firebase
                                     mayMoneySpent: mayUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("May budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -170,17 +169,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(juneOldSpent)) {
                                 // Calculate the remaining budget
                                 var juneOldBudget = parseFloat(doc.data().juneBudget);
-                                var budgetLeft = juneOldBudget - transactionAmount;
+                                var juneBudgetLeft = juneOldBudget - transactionAmount;
                                 
                                 juneUpdatedMoneySpent = juneOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    juneBudget: budgetLeft, // This upadates the budget left on firebase
+                                    juneBudget: juneBudgetLeft, // This upadates the budget left on firebase
                                     juneMoneySpent: juneUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("June budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -201,7 +200,7 @@ function addTransaction() {
                                     julyMoneySpent: julyUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("July budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -212,17 +211,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(augustOldSpent)) {
                                 // Calculate the remaining budget
                                 var augustOldBudget = parseFloat(doc.data().augustBudget);
-                                var budgetLeft = augustOldBudget - transactionAmount;
+                                var augustBudgetLeft = augustOldBudget - transactionAmount;
                                 
                                 augustUpdatedMoneySpent = augustOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    augustBudget: budgetLeft, // This upadates the budget left on firebase
+                                    augustBudget: augustBudgetLeft, // This upadates the budget left on firebase
                                     augustMoneySpent: augustUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("August budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -233,17 +232,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(septemberOldSpent)) {
                                 // Calculate the remaining budget
                                 var septemberOldBudget = parseFloat(doc.data().septemberBudget);
-                                var budgetLeft = septemberOldBudget - transactionAmount;
+                                var septemberBudgetLeft = septemberOldBudget - transactionAmount;
 
                                 septemberUpdatedMoneySpent = septemberOldSpent + transactionAmount;
 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    septemberBudget: budgetLeft, // This upadates the budget left on firebase
+                                    septemberBudget: septemberBudgetLeft, // This upadates the budget left on firebase
                                     septemberMoneySpent: septemberUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("September budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -254,17 +253,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(octoberOldSpent)) {
                                 // Calculate the remaining budget
                                 var octoberOldBudget = parseFloat(doc.data().octoberBudget);
-                                var budgetLeft = octoberOldBudget - transactionAmount;
+                                var octoberBudgetLeft = octoberOldBudget - transactionAmount;
 
                                 octoberUpdatedMoneySpent = octoberOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    octoberBudget: budgetLeft, // This upadates the budget left on firebase
+                                    octoberBudget: octoberBudgetLeft, // This upadates the budget left on firebase
                                     octoberMoneySpent: octoberUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("October budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -275,17 +274,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(novemberOldSpent)) {
                                 // Calculate the remaining budget
                                 var novemberOldBudget = parseFloat(doc.data().novemberBudget);
-                                var budgetLeft = novemberOldBudget - transactionAmount;
+                                var novemberBudgetLeft = novemberOldBudget - transactionAmount;
 
                                 novemberUpdatedMoneySpent = novemberOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    novemberBudget: budgetLeft, // This upadates the budget left on firebase
+                                    novemberBudget: novemberBudgetLeft, // This upadates the budget left on firebase
                                     novemberMoneySpent: novemberUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("November budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
@@ -296,17 +295,17 @@ function addTransaction() {
                             if (!isNaN(userBudget) && !isNaN(totalSpent) && !isNaN(decemberOldSpent)) {
                                 // Calculate the remaining budget
                                 var decemberOldBudget = parseFloat(doc.data().decemberBudget);
-                                var budgetLeft = decemberOldBudget - transactionAmount;
+                                var decemberBudgetLeft = decemberOldBudget - transactionAmount;
 
                                 decemberUpdatedMoneySpent = decemberOldSpent + transactionAmount;
                                 
                                 // Update the budget field of the user document
                                 userDocRef.update({
-                                    decemberBudget: budgetLeft, // This upadates the budget left on firebase
+                                    decemberBudget: decemberBudgetLeft, // This upadates the budget left on firebase
                                     decemberMoneySpent: decemberUpdatedMoneySpent,
                                     totalMoneySpent: updatedTotalSpent  // This upadates the total money spent on firebase
                                 })
-                                    .then(() => console.log("March budget updated successfully"))
+                                    .then(() => console.log("December budget updated successfully"))
                                     .catch(error => console.error("Error updating March budget:", error));
                             } else {
                                 console.error("User budget is not a valid number.");
